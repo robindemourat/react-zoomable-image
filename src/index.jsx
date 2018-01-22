@@ -231,7 +231,7 @@ class ZoomableImage extends Component {
   };
 
   removeBodyClickHandlers = () => {
-    if (document && document.querySelector) {
+    if (document && document.querySelector && this.bodyClickHandlers && this.bodyElement) {
       this.bodyClickHandlers.forEach((handler) => {
         this.bodyElement.removeEventListener(...handler);
       });
